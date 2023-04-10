@@ -7,6 +7,8 @@ components:
 pages:
   index:
     title: nuxt 3[]awesome[]starter
+    whatsApp: whatsApp
+    inquire: 電話查詢
   404:
     title: 找不到该页面
   blank:
@@ -70,3 +72,50 @@ others:
   copy: 复制
   enabled: 启用
   disabled: 禁用
+footer:
+  aboutUs:
+    aboutUs: 關於我們
+    Hema: 希瑪視光
+  Exclusive:
+    Exclusive: 專享優惠
+  Myopia: 
+    Myopia: 近視控制方案
+    Orthokeratoplasty: 角膜矯形術
+    controlOptics: 近視控制光學鏡片
+    MiSight: MiSight®隱形眼鏡
+  Optician: 
+    Optician: 配鏡服務
+    Progressive: 漸進鏡
+    Presbyopia: 多焦點式隱形眼鏡(老花)
+    HardLenses:  硬性隱形眼鏡
+  optometry:  
+    optometry:  視光檢查
+    Comprehensive: 綜合檢查
+    MyopicControlTest: 近視控制檢查
+    lensFitting: 隱形眼鏡驗配
+    Glaucoma: 青光眼篩查
+  Service: 
+    Service: 服務內容
+    ServicesList: 服務一覽
+    ServicesCharge: 服務收費
+    VoucherScheme: 長者醫療券計劃
+  sharing: 
+    sharing: 用戶分享
+  EyeKnowledge: 
+    EyeKnowledge: 護眼知識
+    LittleEye: 護眼小教室
+    childrenEye: 兒童視覺發展
+    CommonEye: 常見的眼睛問題
+  ContactUs:  
+    ContactUs: 聯絡我們
+  copyright:
+    conditions: 條款細則
+    manage: 希瑪眼科視光中心
+    copyright: 版權所有
+    Privacy: 私隱政策
+  map: 
+    mapIsLand: 港島
+    Kowloon: 九龍
+    Territories: 新界
+    YalanMong: 旺角雅蘭
+    MongKok: 旺角

@@ -39,6 +39,11 @@ export const availableLocales: ILocales = {
     iso: 'tr',
     flag: '🇹🇷',
   },
+  zhHk: {
+    name: '繁体中文',
+    iso: 'zh-Hk',
+    flag: 'zhHk',
+  },
 }
 
 export function LanguageManager() {

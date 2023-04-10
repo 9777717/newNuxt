@@ -26,6 +26,7 @@ const identity = useIdentity()
 
 <template>
   <PageWrapper>
+    <div>PageWrapper</div>
     <PageHeader>
       <PageTitle :text="$t('pages.test.title')" class="capitalize" />
     </PageHeader>

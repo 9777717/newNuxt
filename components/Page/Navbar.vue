@@ -11,140 +11,91 @@ export interface IMenuItem {
 const { t } = useLang()
 const app = useAppConfig() as AppConfigInput
 const menus = computed((): IMenuItem[] => [
-  {
-    type: 'link',
-    text: t('pages.getting-started.nav'),
-    route: { name: 'getting-started' },
-  },
   { type: 'link', text: t('pages.blank.nav'), route: { name: 'blank' } },
   { type: 'link', text: t('pages.test.nav'), route: { name: 'test' } },
-  { type: 'link', text: t('pages.post.nav'), route: { name: 'post' } },
   { type: 'link', text: t('pages.setting.nav'), route: { name: 'setting' } },
-  {
-    type: 'button',
-    text: t('pages.dashboard.nav'),
-    route: { name: 'dashboard' },
-  },
+  // {
+  //   type: 'button',
+  //   text: t('pages.dashboard.nav'),
+  //   route: { name: 'dashboard' },
+  // },
 ])
 </script>
 
 <template>
   <BuilderNavbar>
-    <template #banner>
-      <div
-        class="text-white text-xs text-center py-1 px-4 lg:px-8 bg-primary-500 capitalize"
-      >
-        <span class="mr-1">
-          {{ $t('banners.welcome', { app_name: app.name }) }}
-          <Anchor
-            class="underline font-bold"
-            :text="$t('others.learn_more')"
-            href="https://github.com/viandwi24/nuxt3-awesome-starter"
-          />
-        </span>
-      </div>
-    </template>
     <template #menu>
-      <div class="relative hidden lg:flex items-center ml-auto">
-        <nav
-          class="text-sm leading-6 font-semibold text-gray-600 dark:text-gray-300"
-          role="navigation"
-        >
-          <ul class="flex items-center space-x-8">
-            <li v-for="(item, i) in menus" :key="i">
-              <Anchor
-                v-if="item.type === 'link'"
-                :to="item.route ? item.route : undefined"
-                :href="item.href ? item.href : undefined"
-                class="hover:no-underline hover:text-slate-900 hover:dark:text-white capitalize"
-                >{{ item.text }}</Anchor
-              >
-              <Button
-                v-else-if="item.type === 'button'"
-                :text="item.text"
-                size="xs"
-                class="font-extrabold capitalize"
-                :to="item.route ? item.route : undefined"
-                :href="item.href ? item.href : undefined"
-              />
-            </li>
-          </ul>
-        </nav>
-        <div
-          class="flex space-x-4 border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"
-        >
-          <LanguageSwitcher />
-          <ThemeSwitcher />
-          <Anchor
-            class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
-            href="https://github.com/viandwi24/nuxt3-awesome-starter"
-            title="Github"
-          >
-            <IconMdi:github-face />
-          </Anchor>
+      <div class="right_text">
+        <div class="text space-x-4 flex items-center">
+          <div class="text_whats">
+            <img
+              src="https://static.cmereye.com/imgs/2023/04/bbd64119a071aecd.png"
+              alt="WhatsApp"
+            />
+            <text class="text-base font-bold md:text-lg p-2">WhatsApp</text>
+            <!-- class="hover:no-underline hover:text-slate-900 hover:dark:text-white capitalize" -->
+          </div>
+          <div class="text_tel p-4">
+            <img
+              src="https://static.cmereye.com/imgs/2023/04/56577123ca0c1773.png"
+              alt="電話查詢"
+            />
+            <text class="text-base font-bold md:text-lg p-2">{{
+              t('pages.index.inquire')
+            }}</text>
+          </div>
         </div>
+        <div class="img p-4 mt-6">
+          <img
+            src="https://static.cmereye.com/imgs/2023/04/92e29b10f3a22ee5.png"
+          />
+        </div>
+        <!-- <LanguageSwitcher /> -->
+        <!-- <ThemeSwitcher /> -->
       </div>
-    </template>
-    <template #options="{ toggleOptions }">
-      <ActionSheet @on-close="toggleOptions(false)">
-        <ActionSheetBody>
-          <ActionSheetHeader text="Menu" />
-          <nav class="leading-6 font-semibold text-gray-600 dark:text-gray-300">
-            <ul class="flex flex-col">
-              <li
-                v-for="(item, i) in menus"
-                :key="i"
-                class="flex w-full"
-                :class="{
-                  'pb-2 mb-2 border-b border-gray-900/10 dark:border-gray-50/[0.2]':
-                    item.type === 'link',
-                }"
-              >
-                <Anchor
-                  v-if="item.type === 'link'"
-                  :to="item.route ? item.route : undefined"
-                  :href="item.href ? item.href : undefined"
-                  class="flex-1 hover:no-underline capitalize"
-                  >{{ item.text }}</Anchor
-                >
-                <Button
-                  v-else-if="item.type === 'button'"
-                  :text="item.text"
-                  size="xs"
-                  class="flex-1 font-extrabold capitalize"
-                  :to="item.route ? item.route : undefined"
-                  :href="item.href ? item.href : undefined"
-                />
-              </li>
-            </ul>
-          </nav>
-          <div class="mt-6 text-sm font-bold capitalize">
-            {{ $t('components.theme_switcher.change_theme') }}
-          </div>
-          <div class="mt-2">
-            <ThemeSwitcher type="select-box" />
-          </div>
-          <div class="mt-6 text-sm font-bold capitalize">
-            {{ $t('components.language_switcher.change_language') }}
-          </div>
-          <div class="mt-2">
-            <LanguageSwitcher type="select-box" />
-          </div>
-        </ActionSheetBody>
-        <Button
-          type="secondary"
-          title="Github"
-          href="https://github.com/viandwi24/nuxt3-awesome-starter"
-        >
-          <IconMdi:github-face />
-          <span class="ml-1">Github</span>
-        </Button>
-        <Button
-          text="Close"
-          type="secondary"
-          @click.prevent="toggleOptions(false)"
-        />
-      </ActionSheet>
+      <!-- <div class="flex space-x-4 border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"> -->
+      <!--- 语言翻译  --->
+      <!-- <LanguageSwitcher /> -->
+      <!--- 主题 --->
+      <!-- <ThemeSwitcher /> -->
+      <!-- </div> -->
     </template>
   </BuilderNavbar>
 </template>
+
+<style lang="scss" scoped>
+.right_text {
+  color: white;
+  display: flex;
+  height: 100%;
+}
+
+.right_text > div {
+  display: flex;
+  align-items: stretch;
+}
+
+.text > div {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+//
+.text_tel {
+  background: #ffee54;
+
+  text {
+    color: #00a4ce;
+  }
+}
+
+.right_text {
+  .img {
+    img {
+      width: 22px;
+      height: 20px;
+    }
+  }
+}
+</style>

@@ -67,5 +67,13 @@
     "**/*.{js,ts,vue,html}": [
       "pnpm lintfix"
     ]
+  },
+  "dependencies": {
+    "@nuxt/devtools": "^0.3.1",
+    "@nuxtjs/google-fonts": "^3.0.0",
+    "nuxt-cloudflare-analytics": "^1.0.8",
+    "nuxt-gtag": "^0.4.0",
+    "nuxt-swiper": "^1.1.0",
+    "vue-i18n": "9"
   }
 }

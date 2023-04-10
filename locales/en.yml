@@ -70,3 +70,50 @@ others:
   copy: copy
   enabled: enabled
   disabled: disabled
+footer:
+  aboutUs:
+    aboutUs: About Us
+    Hema: Hema optometry
+  Exclusive:
+    Exclusive: Exclusive offer
+  Myopia: 
+    Myopia: Myopia control program
+    Orthokeratoplasty: Orthokeratoplasty
+    controlOptics: Myopic control optics
+    MiSight: MiSight® Contact Lenses
+  Optician: 
+    Optician: Optician service
+    Progressive: Progressive mirror 
+    Presbyopia: Multi-focal Contact Lenses (Presbyopia)
+    HardLenses:  Hard contact lenses
+  optometry:  
+    optometry:  optometry
+    Comprehensive: Comprehensive examination
+    MyopicControlTest: Myopic control test
+    lensFitting: Contact lens fitting
+    Glaucoma: Glaucoma screening
+  Service: 
+    Service: Service content
+    ServicesList: List of Services
+    ServicesCharge: Service charge
+    VoucherScheme: Elderly Medical Voucher Scheme
+  sharing: 
+    sharing: User sharing
+  EyeKnowledge: 
+    EyeKnowledge: Eye care knowledge
+    LittleEye: Little eye care classroom
+    childrenEye: Visual development of children
+    CommonEye: Common eye problems
+  ContactUs:  
+    ContactUs: Contact us
+  copyright:
+    conditions: Terms and conditions
+    manage: Hema Ophthalmic optometry Center
+    copyright: All Rights reserved
+    Privacy: Privacy policy
+  map: 
+    mapIsLand: hk island
+    Kowloon: Kowloon
+    Territories: New Territories
+    YalanMong: Yalan Mong Kok
+    MongKok: Mong Kok

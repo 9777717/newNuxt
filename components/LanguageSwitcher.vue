@@ -22,7 +22,7 @@ const localeSetting = useState<string>('locale.setting')
 </script>
 
 <template>
-  <div class="flex items-center">
+  <div class="flex items-center m-2">
     <Listbox
       v-if="currentStyle === 'dropdown-right-top'"
       v-model="localeSetting"
